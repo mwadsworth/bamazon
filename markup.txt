@@ -1,0 +1,30 @@
+This is a short video clip that will explain the bamazon app.
+
+the bamazon app is a simplified app that is supposed to mimic an app like amazon. 
+
+the customer will be looking through a list of items to purchase.
+
+they will be able to select items and quantity of an item to make a purchase.
+
+to start off, I first needed to create a database in mySQL containing all the items.
+
+after entering all the data, in this case 10 different items with varying amounts in stock.
+
+next, I needed to build the code in javascript and connecting the database with the file. 
+
+I connected the files together using npm packages: mysql, and inquirer a
+as you can see at tthe top of thee code. 
+
+lines 1 -through 25 in the code shows how the files are connected.
+
+lines 26-37 show a function that displays the table of items available for purchase.
+
+line 38-48 asks the customer what would like to be purchased.
+
+line 50-65 checks the database to see if an item is in stock, if so, the customer will be asked the next question of how many of the item they would like to purchase.if not available the customer will be sent back to the first question of what they would like to purchase.
+
+lines 67-93 show the next function for how many of an item the customer would like to purchase. if there is an available quantity to purchase the customer will move to the next function to purchase. if the item quantity is not available, the customer will be sent back to the first function.
+
+lines 95-109 the purchase function will the database is updated with the new information subtracting the quantity in stock for an item with the new information. example if i purchase 2 banana chips from the 10 available then the stock will be updated to 8 banana chips. 
+
+lines 110-122 the checkInventory function contains a for loop to look through the data in the database to make sure items are or not available. 

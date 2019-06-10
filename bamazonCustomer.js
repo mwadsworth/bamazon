@@ -76,7 +76,6 @@ function howMany(product) {
     }) 
     .then(function(answer){   
         console.log ("item",product);
-        console.log ("does it work?", answer)
         var quantityWanted =  parseInt(answer.quantity);
         var inventoryQuantity = parseInt(product.stock_quantity);
         console.log (quantityWanted, inventoryQuantity);
@@ -103,17 +102,11 @@ function purchase(quantityWanted, product) {
           function(err, res) {
             // Let the user know the purchase was successful, re-run loadProducts
             console.log("\nYou have purchased " + quantityWanted+ " " + product.product_name + "'s!");
+            //rerun display again//
             display();
           }
         );
       }
-    
-
-    //inform the user that purchase was successful//
-
-    //rerun display again//
-
-
 function checkInventory(choiceId, inventory) {
     console.log (choiceId, inventory)
     //for loop to loop through inventory//
